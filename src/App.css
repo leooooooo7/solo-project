@@ -1,7 +1,7 @@
 :root {
   --darkMain: #2a2a2a;
   --lightMain: #dedede;
-  --midMain: #434343;
+  --midMain: #3a3a3a;
   --hover: #707070;
 }
 
@@ -27,9 +27,15 @@ body {
 }
 .logo {
   float: left;
-  margin: 6px 16px;
+  margin: 3px 16px;
   width: 50px;
+  border-radius: 10000000px;
+  box-shadow: 0 0 0px #00858f;
+  transition: 0.3s;
   cursor: pointer;
+}
+.logo:hover {
+  box-shadow: 0 0 20px #00858f;
 }
 .topBarTabs {
   margin:0;
@@ -39,15 +45,16 @@ body {
 .topBarTabs li {
   display: inline-block;
   padding: 5px 20px;
-  margin:0 60px;
+  margin:0 45px;
   border-radius: 5px;
-  background-color: var(--midMain);
-  font-size:25px;
+  /* background-color: var(--midMain); */
+  font-size:20px;
   color: var(--lightMain);
+  transition: 0.3s;
   cursor:pointer;
 }
 .topBarTabs li:hover {
-  background-color: var(--hover);
+  background-color: var(--midMain);
 }
 
 .content {
@@ -73,6 +80,7 @@ body {
   border-radius: 5px;
   border-bottom: solid 1px var(--lightMain);
   font-size: 25px;
+  transition: 0.3s;
   cursor:pointer;
 }
 .gameList li:hover {
