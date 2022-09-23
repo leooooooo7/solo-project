@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import '../App.css';
-import logo from "../../assets/logo.png"
+import './App.css';
+import logo from "../assets/logo.png"
+import fav from "../favicon.ico";
+import {
+  //Routes,
+  //Route,
+  Link
+} from "react-router-dom";
 
-import Content from './Content';
+import Content from './components/Content';
 
 
 
@@ -12,10 +18,10 @@ class App extends React.Component {
     return (
       <div>
         <div className="topBar">
-          <a href={__dirname}><img className="logo" src={logo} alt="" /></a>
+          <Link to='/'><img className="logo" src={logo} alt="" /></Link>
           <ul className="topBarTabs">
             <a href={__dirname}><li>Home</li></a>
-            <a href={__dirname + "/snakegame"}><li>Snake Game</li></a>
+            <Link to='/snakegame'><li>Snake Game</li></Link>
             <a href={__dirname}><li>Other Things...</li></a>
           </ul>
         </div>
@@ -26,4 +32,4 @@ class App extends React.Component {
 }
 
 
-render(<App />, document.querySelector('#root'));
+export default App;

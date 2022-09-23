@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: "./src/components/App.jsx",
+  entry: "./src/index.js",
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
@@ -13,6 +13,9 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
+    // new HtmlWebpackPlugin({
+    //   favicon: "./favicon.ico",
+    // }),
   ],
   resolve: {
     modules: [__dirname, 'node_modules'],
